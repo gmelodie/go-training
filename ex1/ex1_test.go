@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "ex1_results"
+	. "github.com/gmelodie/go-training/ex1"
 )
 
 var _ = Describe("Ex1", func() {

@@ -2,7 +2,7 @@ package ex1
 
 //HelloWorld classic function
 func HelloWorld() string {
-	return "HelloWorld"
+	return "Hello World"
 }
 
 //AddInts return sum of two int
@@ -17,12 +17,15 @@ func AddIntsDifferents(value1 int64, value2 int32) int {
 
 //Substring standard method, don't use library
 func Substring(value string, left, right int) string {
-	return ""
+	s := value[left:right]
+	return s
 }
 
 // SubstringWithErrors return substringed value but can generate errors
 func SubstringWithErrors(value string, left, right int) (string, error) {
-	return "", nil
+
+	s := value[left:right]
+	return s, nil
 }
 
 // ExtractNumbersFromString return the numbers existing in the list
