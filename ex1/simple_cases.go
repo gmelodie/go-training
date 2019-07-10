@@ -90,5 +90,10 @@ func CreateSet(values ...interface{}) map[interface{}]struct{} {
 
 //GetEndList return the end of the list
 func GetEndList(list []string, from int) ([]string, error) {
-	return []string{}, nil
+
+	if from > len(list) {
+		return make([]string, 0), errors.New("from value is bigger then slice itself")
+	}
+
+	return list[len(list)-from:], nil
 }
