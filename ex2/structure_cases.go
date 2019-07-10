@@ -1,16 +1,23 @@
 package ex2
 
 //Movie TODO : create structure Movie with public attributes title, year and list of actors (string list)
-type Movie struct{}
+type Movie struct {
+	Title  string
+	Year   int
+	Actors []string
+}
 
 //Movies is a list of movies
 type Movies []Movie
 
 //AddMovie add a new movie in list
-func (ms *Movies) AddMovie(movie Movie) {}
+func (ms *Movies) AddMovie(movie Movie) {
+	(*ms).append(*ms, movie)
+}
 
 //SortByYear sort movies by year
-func (ms Movies) SortByYear() {}
+func (ms Movies) SortByYear() {
+}
 
 //SortByName sort movies by name
 func (ms Movies) SortByName() {}
@@ -22,7 +29,7 @@ func NewMovie(title string, year int) Movie {
 
 // GetTitle return the title of movie
 func (movie Movie) GetTitle() string {
-	return ""
+	return movie.title
 }
 
 //ToJson convert movie to json
